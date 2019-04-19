@@ -13,8 +13,7 @@
 
 
 .LINK
-    http://labs.cubelink.org/
-
+   https://github.com/nextinstall/activedirectory
 
 .DESCRIPTION
     Script outputs status of Active Driectory replication for each parter and replication set.
@@ -37,7 +36,7 @@
     Purpose:            Check Active Directory Replication Health
     Author:             Tom Gregory (tom [@] cubelink.org)
     
-    Thanks to:             Paul Cunningham who long ago framed the HTML reporting logic in his excellent Exchange scripts: 
+    Thanks to:          Paul Cunningham who long ago framed the HTML reporting logic in his excellent Exchange scripts: 
                         @ https://paulcunningham.me/
 
                         The Active Directory Engineering teams at Harvard University and MIT where I got paid to write the 
@@ -101,7 +100,8 @@ $smtpsettings = @{
 ######################################################################################
 # Script Logic                                                                       #
 ######################################################################################
-$ADDomain = Get-ADDomain
+$ADDomain = Get-ADDomain -ErrorAction SilentlyContinue
+
 $servers = $ADDomain.ReplicaDirectoryServers | Sort-Object
 
 #Specify a server for testing/targeting
