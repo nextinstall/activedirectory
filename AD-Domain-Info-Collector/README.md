@@ -10,7 +10,7 @@ This script should be run to gather data about an Active Directory enviornment. 
 
 ## Getting Started
 
-Download the script & run it! 
+*Download the script & run it!*
 
 Parameters available:
 * Computer Object Last Login (how far back to go). Default: 99999 days
@@ -22,8 +22,8 @@ Script creates a .ZIP file to your artifact directory of all gathered artifacts.
 
 ## Prerequisites
 
-Active Directory Module
-PowerShell v2 or greater.
+* Active Directory Module
+* PowerShell v2 or greater
 
 ## Versioning
 
